@@ -6,8 +6,82 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
-    </style>
+        /* seleciona todos os elementos
+        *{
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+        /* é uma classe
+        .tag {
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+        /* é um id
+         #aprovados{
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+        /* div diretamente dentro de div(filho direto)
+        #aninhado > div{
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+        /* seleciona qualquer decedente section da id
+        #aninhado section{
+            color: #ff0;
+            background-color: #f77;
+        }  */
+        /* se tiver um p depois um ul selecionar o ul (devem ser vizinhos)
+        p + ul{
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+        /* irmão pai
+        p ~ ol{
+            color: #ff0;
+            background-color: #f77;
+        } */
+        /* seleciona a propriedade
+         [feira]{
+            color: #ff0;
+            background-color: #f77;
+        } */
+        /* seleciona a propriedade como valor igual a casa
+        [feira=casa]{
+            color: #ff0;
+            background-color: #f77;
+        } */
+        /* seleciona a propriedade como valor separados  por espaço igual a escritório
+        [feira~=ecritorio]{
+            color: #ff0;
+            background-color: #f77;
+        } */
+        /* seleciona a propriedade como valor que contenha asa 
+        [feira*=asa]{
+            color: #ff0;
+            background-color: #f77;
+        } */
+        /* seleciona o primeiro filho de span
+        span:nth-child(1){
+            color: #ff0;
+            background-color: #f77;
+        } */
+        /* seleciona os filhos impares de span
+        section > :nth-child(odd){
+            color: #ff0;
+            background-color: #f77;
+        } */
+        /* seleciona o segundo elemento do tipo span */
+        section > span:nth-of-type(2){
+            color: #ff0;
+            background-color: #f77;
+        }
+        </style>
 </head>
 
 <body>
@@ -27,7 +101,7 @@
                 <li>Pedro</li>
                 <li>Ana</li>
             </ol>
-            <div id='aninhado' class='tag'>
+            <div id='aninhado' class='tag nolabel'>
                 <div class="tag">
                     <section class='tag'>
                         <span class='tag'>1</span>
