@@ -9,9 +9,26 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- onclick = "navegarEm5s(event)"  é uma forma explicita, mas é hardcode--> 
+
+        <a espera-um-pouco href="https://google.com.br" >Google</a>
     </div>
     <script>
         // ...
+        function navegarEm5s(e){
+            e.preventDefault()
+            console.log('Saindo em 5s...')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+        // const a = document.querySelector('a') // os nomes das tag, ids  e classes é melhor deixar exclusivamente para aplicar estilos
+        // a.onclick = navegarEm5s
+
+        const a = document.querySelector('[espera-um-pouco]') // melhor forma é criar uma propriedade especifica
+        a.onclick = navegarEm5s
+
+        
     </script>
 </body>

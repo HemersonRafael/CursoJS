@@ -13,6 +13,16 @@
     </div>
     <script>
         // ...
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alterar'//substitui o paragrafo pelo texto
+        // div.outerHTML = 'texto alterado' subistitui a div pelo texto
+        div.insertAdjacentHTML('beforebegin', '<p>Antes Início</p>')
+        div.insertAdjacentHTML('afterbegin', '<p>Depois Início</p>')
+        div.insertAdjacentHTML('beforeend', '<p>Antes Fim</p>')
+        div.insertAdjacentHTML('afterend', '<p>Depois do fim</p>')
+
+
+
         
     </script>
 </body>
